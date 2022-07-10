@@ -10,6 +10,20 @@
 - электролитический конденсатор (напряжением от 10В, ёмкость чем больше, тем лучше)
 - программатор ISP (в качестве оного может выступать плата Arduino (UNO, Mega, Nano), либо популярный USBasp)
 
+## Прошивка
+Если у вас нет пакета ATtinyCore, добавьте его в менеджер плат: `http://drazzy.com/package_drazzy.com_index.json`
+Параметры прошивки в среде ArduinoIDE:
+- выбираем плату ATtiny25/45/85(No bootloader)
+- chip: ATtiny85
+- Clock Source: 16MHz(PLL(
+- Timer 1 Clock: CPU
+- LTO: Enabled
+- millis()/micros(): Enabled
+- Save EEPROM: EEPROM retained
+- B.O.D. Level: Disabled
+
+Все библиотеки можно найти по их названию в менеджере библиотек.
+
 ## Сборка
 Необходимые компоненты:
 ![scheme](/doc/components.jpg)
