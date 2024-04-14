@@ -16,7 +16,7 @@
 Параметры прошивки в среде ArduinoIDE:
 - выбираем плату ATtiny25/45/85(No bootloader)
 - chip: ATtiny85
-- Clock Source: 16MHz(PLL(
+- Clock Source: 16MHz(PLL)
 - Timer 1 Clock: CPU
 - LTO: Enabled
 - millis()/micros(): Enabled
@@ -66,7 +66,7 @@
 В прошивке ищем функцию `SolidWhite()` (для изменения/добавления световой температуры), или `SolidColor()` для добавления/изменения цвета или градиента.
 
 Если хотим добавить световую температуру (`SolidWhite()`):
-1) Нужные параметры световой температуры в RGB формате можно узнать [тут](https://academo.org/demos/colour-temperature-relationship/). Просто выбираем нужну температуру в Кельвинах и копируем значения в скобках после rgb.
+1) Нужные параметры световой температуры в RGB формате можно узнать [тут](https://academo.org/demos/colour-temperature-relationship/). Просто выбираем нужную температуру в Кельвинах и копируем значения в скобках после rgb.
 2) Добавляем после последнего `break;` конструкцию:
 ```cpp
 case x: strip.fill(mRGB(200, 240, 255));
